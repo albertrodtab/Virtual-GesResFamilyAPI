@@ -1,0 +1,20 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "PUT",
+    "urlPattern": "/centro/1",
+    "bodyPatterns": [
+      {
+        "equalToJson": "{ \"id\": 1, \"direccion\": \"Garcia Barbon, Nº 60, Vigo\",  \"numRegistro\": \"G124567\", \"email\": \"centrodia.vigo@alberto.com\", \"telefono\": \"800623180\"}",
+        "jsonCompareMode": "STRICT"
+      }
+    ]
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "centros/putCentro-KO-400.json"
+  }
+}

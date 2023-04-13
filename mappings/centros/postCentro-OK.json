@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/centros"
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "centros/postCentros-OK.json"
+  }
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "nombre": "Centro de Día Vigo",
+    "direccion": "Garcia Barbon, Nº 60, Vigo",
+    "numRegistro": "G124567",
+    "email": "centrodia.vigo@alberto.com",
+    "telefono": "800623180"
+  },
+  {
+    "id": 2,
+    "nombre": "Centro de Día Lalin",
+    "direccion": "Filgueiroa, Nº 60, Lalín",
+    "numRegistro": "G789456",
+    "email": "centrodia.lalin@alberto.com",
+    "telefono": "900623180"
+  }
+]

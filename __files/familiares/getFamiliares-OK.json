@@ -1,0 +1,18 @@
+[
+  {
+    "id": 3,
+    "nombre": "Martin",
+    "apellidos": "RodriguezTaboada",
+    "dni": "44091652P",
+    "fechaNacimiento": "26-09-1988",
+    "telefono": "600623180"
+  },
+  {
+    "id": 4,
+    "nombre": "Fernando",
+    "apellidos": "RodriguezTaboada",
+    "dni": "89457623A",
+    "fechaNacimiento": "26-09-1975",
+    "telefono": "986451278"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "nombrePlan": "Terapia Cognitiva",
+  "terapia": "Juegos Lúdicos",
+  "fechaInicio": "01-12-2021",
+  "fechaFin": null,
+  "importante": true,
+  "descripcion": "Pasatienpos adaptados, lectura, clases adaptadas..."
+}

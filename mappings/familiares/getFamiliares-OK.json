@@ -1,13 +1,13 @@
 {
   "request": {
     "method": "GET",
-    "urlPattern": "/centro/([0-9]*)"
+    "url": "/familiares"
   },
   "response": {
     "status": 200,
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "centros/getCentro-OK.json"
+    "bodyFileName": "familiares/getFamiliares-OK.json"
   }
 }

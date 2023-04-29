@@ -2,13 +2,13 @@
   "priority": 1,
   "request": {
     "method": "GET",
-    "urlPattern": "/centro/404"
+    "url": "/profesionales404"
   },
   "response": {
     "status": 404,
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "centros/getCentro-KO-404.json"
+    "bodyFileName": "profesionales/getProfesional-KO-404.json"
   }
 }

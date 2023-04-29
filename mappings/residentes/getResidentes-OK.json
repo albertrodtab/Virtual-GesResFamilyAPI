@@ -1,14 +1,13 @@
 {
-  "priority": 1,
   "request": {
     "method": "GET",
-    "urlPattern": "/centro/404"
+    "url": "/residentes"
   },
   "response": {
-    "status": 404,
+    "status": 200,
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "centros/getCentro-KO-404.json"
+    "bodyFileName": "residentes/getResidentes-OK.json"
   }
 }

@@ -1,13 +1,13 @@
 {
   "request": {
     "method": "POST",
-    "url": "/centros400"
+    "url": "/familiares500"
   },
   "response": {
-    "status": 400,
+    "status": 500,
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "centros/postCentros-KO-400.json"
+    "bodyFileName": "KO-500.json"
   }
 }

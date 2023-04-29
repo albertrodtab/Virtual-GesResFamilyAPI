@@ -1,0 +1,9 @@
+{
+  "id": 3,
+  "nombre": "Victorino",
+  "apellidos": "Rodríguez Castro",
+  "dni": "78459632L",
+  "fechaNacimiento": "03-08-1947",
+  "sexo": "M",
+  "saldo": 0.0
+}

@@ -1,0 +1,9 @@
+{
+  "id": 2,
+  "nombre": "Maria",
+  "apellidos": "Lopez Gonzalez",
+  "dni": "78451236P",
+  "fechaNacimiento": "26-09-1982",
+  "categoria": "Terapeuta Ocupacional",
+  "planes": []
+}

@@ -1,14 +1,13 @@
 {
-  "priority": 1,
   "request": {
     "method": "PUT",
-    "urlPattern": "/centro/400"
+    "urlPattern": "/residente/([0-9]*)"
   },
   "response": {
-    "status": 400,
+    "status": 200,
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "centros/putCentro-KO-400.json"
+    "bodyFileName": "residentes/putResidente-OK.json"
   }
 }

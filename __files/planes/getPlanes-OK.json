@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nombrePlan": "Terapia Cognitiva",
+    "terapia": "Juegos Lúdicos",
+    "fechaInicio": "01-12-2021",
+    "fechaFin": null,
+    "importante": false,
+    "descripcion": "Pasatienpos adaptados, lectura, clases adaptadas..."
+  },
+  {
+    "id": 5,
+    "nombrePlan": "GeroBasket",
+    "terapia": "Juegos Lúdicos",
+    "fechaInicio": "01-12-2021",
+    "fechaFin": null,
+    "importante": false,
+    "descripcion": "Baloncesto adaptado"
+  }
+]

@@ -1,4 +1,5 @@
 {
-"internalError": 1,
-"message": "No se ha podido encontrar el centro"
+  "internalError": 404,
+  "message": "Centro no encontrado",
+  "errors": {}
 }

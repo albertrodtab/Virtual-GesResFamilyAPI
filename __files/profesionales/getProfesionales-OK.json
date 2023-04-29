@@ -1,0 +1,39 @@
+[
+  {
+    "id": 2,
+    "nombre": "Maria",
+    "apellidos": "Lopez Gonzalez",
+    "dni": "78451236P",
+    "fechaNacimiento": "26-09-1982",
+    "categoria": "Terapeuta Ocupacional",
+    "planes": []
+  },
+  {
+    "id": 3,
+    "nombre": "Alberto",
+    "apellidos": "Rodriguez Taboada",
+    "dni": "44091652P",
+    "fechaNacimiento": "26-09-1988",
+    "categoria": "Enfermero",
+    "planes": [
+      {
+        "id": 6,
+        "nombrePlan": "GeroBasket",
+        "terapia": "Juegos Lúdicos",
+        "fechaInicio": "01-12-2021",
+        "fechaFin": null,
+        "importante": true,
+        "descripcion": "Baloncesto adaptado"
+      },
+      {
+        "id": 7,
+        "nombrePlan": "GeroBasket",
+        "terapia": "Juegos Lúdicos",
+        "fechaInicio": "01-12-2021",
+        "fechaFin": null,
+        "importante": true,
+        "descripcion": "Baloncesto adaptado"
+      }
+    ]
+  }
+]

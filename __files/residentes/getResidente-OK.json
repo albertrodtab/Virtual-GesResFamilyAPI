@@ -1,0 +1,9 @@
+{
+  "id": 2,
+  "nombre": "Victoria",
+  "apellidos": "Garcia Sanchez",
+  "dni": "78459632L",
+  "fechaNacimiento": "03-08-1949",
+  "sexo": "F",
+  "saldo": 200.0
+}

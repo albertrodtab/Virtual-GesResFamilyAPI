@@ -2,7 +2,7 @@
   "priority": 1,
   "request": {
     "method": "DELETE",
-    "url": "/centro/25"
+    "url": "/centro/404"
   },
   "response": {
     "status": 404,

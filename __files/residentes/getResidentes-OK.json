@@ -1,0 +1,29 @@
+[
+  {
+    "id": 2,
+    "nombre": "Victoria",
+    "apellidos": "Garcia Sanchez",
+    "dni": "78459632L",
+    "fechaNacimiento": "03-08-1949",
+    "sexo": "F",
+    "saldo": 200.0
+  },
+  {
+    "id": 3,
+    "nombre": "Victorino",
+    "apellidos": "Rodríguez Castro",
+    "dni": "78459632L",
+    "fechaNacimiento": "03-08-1947",
+    "sexo": "M",
+    "saldo": 0.0
+  },
+  {
+    "id": 5,
+    "nombre": "Fernando",
+    "apellidos": "Rodríguez Castro",
+    "dni": "78459632L",
+    "fechaNacimiento": "03-08-1947",
+    "sexo": "M",
+    "saldo": 0.0
+  }
+]

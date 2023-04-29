@@ -2,13 +2,13 @@
   "priority": 1,
   "request": {
     "method": "PUT",
-    "urlPattern": "/centro/400"
+    "urlPattern": "/profesionales/400"
   },
   "response": {
     "status": 400,
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "centros/putCentro-KO-400.json"
+    "bodyFileName": "profesionales/putProfesional-KO-400.json"
   }
 }

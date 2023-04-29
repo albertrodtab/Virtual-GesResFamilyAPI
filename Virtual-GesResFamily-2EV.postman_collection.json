@@ -1,4 +1,4 @@
- {
+{
 	"info": {
 		"_postman_id": "a479e7ef-db32-4123-966a-57cd3f8b1b11",
 		"name": "Virtual-GesResFamily-2EV",
@@ -10,13 +10,13 @@
 			"name": "Centros",
 			"item": [
 				{
-					"name": "addCentro KO",
+					"name": "addCentro KO-500",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Centro de Día Vigo\",\r\n    \"direccion\": \"Garcia Barbon, Nº 60, Vigo\",\r\n    \"numRegistro\": \"G124567\",\r\n    \"email\": \"centrodia.vigo@alberto.com\",\r\n    \"telefono\": \"800623180\"\r\n}",
+							"raw": "{\r\n\r\n    \"direccion\": \"Garcia Barbon, Nº 60, Vigo\",\r\n    \"numRegistro\": \"G124567\",\r\n    \"email\": \"centrodia.vigo@alberto.com\",\r\n    \"telefono\": \"800623180\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24,14 +24,42 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/centros",
+							"raw": "http://localhost:8080/centros500",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"centros"
+								"centros500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addCentro KO-400",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"\",\r\n    \"direccion\": \"Garcia Barbon, Nº 60, Vigo\",\r\n    \"numRegistro\": \"G124567\",\r\n    \"email\": \"centrodia.vigo@alberto.com\",\r\n    \"telefono\": \"800623180\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/centros400",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"centros400"
 							]
 						}
 					},
@@ -66,12 +94,12 @@
 					"response": []
 				},
 				{
-					"name": "consultCentroById KO",
+					"name": "consultCentroById KO-404",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/centro/25",
+							"raw": "http://localhost:8080/centro/404",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -79,14 +107,34 @@
 							"port": "8080",
 							"path": [
 								"centro",
-								"25"
+								"404"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "consultCentroById",
+					"name": "consultCentroById KO-500",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/centro/500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"centro",
+								"500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultCentroById OK",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -106,7 +154,7 @@
 					"response": []
 				},
 				{
-					"name": "consultCentros",
+					"name": "consultCentros OK",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -125,47 +173,50 @@
 					"response": []
 				},
 				{
-					"name": "consultCentrosVariosCriterios",
+					"name": "consultCentros KO 404",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/centros?nombre=Centro de Dia Lalin",
+							"raw": "http://localhost:8080/centros404",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"centros"
-							],
-							"query": [
-								{
-									"key": "nombre",
-									"value": "Centro de Dia Lalin"
-								},
-								{
-									"key": "numRegistro",
-									"value": "G123456",
-									"disabled": true
-								},
-								{
-									"key": "email",
-									"value": "centrodia.lalin@alberto.com",
-									"disabled": true
-								}
+								"centros404"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "SQLconsultTotalResidentesCentro",
+					"name": "consultCentros KO 500",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/centro/1/numResidentes",
+							"raw": "http://localhost:8080/centros500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"centros500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCentro KO 404",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/centro/404",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -173,15 +224,34 @@
 							"port": "8080",
 							"path": [
 								"centro",
-								"1",
-								"numResidentes"
+								"404"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "deleteCentro KO",
+					"name": "deleteCentro KO 500",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/centro/500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"centro",
+								"500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCentro 0k",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -201,13 +271,13 @@
 					"response": []
 				},
 				{
-					"name": "updateCentro KO",
+					"name": "updateCentro KO-404",
 					"request": {
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": " {\r\n    \"id\": 1,\r\n\r\n    \"direccion\": \"Filgueiroa, Nº 60, Donramiro, Lalín\",\r\n    \"numRegistro\": \"G698745\",\r\n    \"email\": \"centrodia.lalin@alberto.com\",\r\n    \"telefono\": \"700623180\"\r\n}\r\n",
+							"raw": " {\r\n    \"id\": 1,\r\n    \"nombre\": \"Centro de Día Vigo\",\r\n    \"direccion\": \"Filgueiroa, Nº 60, Donramiro, Lalín\",\r\n    \"numRegistro\": \"G698745\",\r\n    \"email\": \"centrodia.lalin@alberto.com\",\r\n    \"telefono\": \"700623180\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -215,7 +285,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/centro/1",
+							"raw": "http://localhost:8080/centro/404",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -223,7 +293,36 @@
 							"port": "8080",
 							"path": [
 								"centro",
-								"1"
+								"404"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCentro KO-400",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"id\": 1,\r\n    \"nombre\": \"\",\r\n    \"direccion\": \"Filgueiroa, Nº 60, Donramiro, Lalín\",\r\n    \"numRegistro\": \"G698745\",\r\n    \"email\": \"centrodia.lalin@alberto.com\",\r\n    \"telefono\": \"700623180\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/centro/400",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"centro",
+								"400"
 							]
 						}
 					},
@@ -236,36 +335,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": " {\r\n    \"id\": 1,\r\n    \"nombre\": \"Centro de Día Lalín\",\r\n    \"direccion\": \"Filgueiroa, Nº 60, Donramiro, Lalín\",\r\n    \"numRegistro\": \"G698745\",\r\n    \"email\": \"centrodia.lalin@alberto.com\",\r\n    \"telefono\": \"700623180\"\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/centro/",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"centro",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "ModificarTelefonoCentro",
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "900623180",
+							"raw": " {\r\n    \"id\": 1,\r\n    \"nombre\": \"Centro de Día Lalín\",\r\n    \"direccion\": \"Filgueiroa, Nº 60, Donramiro, Lalín\",\r\n    \"numRegistro\": \"G698745\",\r\n    \"email\": \"centrodia.lalin@alberto.com\",\r\n    \"telefono\": \"800623180\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -293,7 +363,7 @@
 			"name": "Familiares",
 			"item": [
 				{
-					"name": "addFamiliar",
+					"name": "addFamiliar OK",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -321,13 +391,13 @@
 					"response": []
 				},
 				{
-					"name": "familiar/{familiarId}/residente/{residenteId}",
+					"name": "addFamiliar KO-400",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"familiarId\": 2,\r\n    \"residenteId\": 10\r\n    }",
+							"raw": "{\r\n    \"dni\": \"44091652P\",\r\n    \"nombre\": \"\",\r\n    \"apellidos\": \"RodriguezTaboada\",\r\n    \"fechaNacimiento\": \"26-09-1988\",\r\n    \"telefono\": \"600623180\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -335,24 +405,49 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/familiar/2/residente/10",
+							"raw": "http://localhost:8080/familiares400",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"familiar",
-								"2",
-								"residente",
-								"10"
+								"familiares400"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "consultFamiliares",
+					"name": "addFamiliar KO-500",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": \"44091652P\",\r\n    \"nombre\": \"Martin\",\r\n    \"apellidos\": \"RodriguezTaboada\",\r\n    \"fechaNacimiento\": \"26-09-1988\",\r\n    \"telefono\": \"600623180\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/familiares500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"familiares500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultFamiliares OK",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -371,7 +466,45 @@
 					"response": []
 				},
 				{
-					"name": "consultFamiliarById",
+					"name": "consultFamiliares KO-404",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/familiares404",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"familiares404"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultFamiliares KO-500",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/familiares500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"familiares500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultFamiliarById OK",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -391,42 +524,47 @@
 					"response": []
 				},
 				{
-					"name": "consultFamiliaresVariosCriterios",
+					"name": "consultFamiliarById KO-404",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/familiares?nombre=martin",
+							"raw": "http://localhost:8080/familiar/404",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"familiares"
-							],
-							"query": [
-								{
-									"key": "nombre",
-									"value": "martin"
-								},
-								{
-									"key": "dni",
-									"value": "",
-									"disabled": true
-								},
-								{
-									"key": "telefono",
-									"value": "",
-									"disabled": true
-								}
+								"familiar",
+								"404"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "deleteFamiliar",
+					"name": "consultFamiliarById KO-500",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/familiar/500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"familiar",
+								"500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteFamiliar OK",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -446,13 +584,53 @@
 					"response": []
 				},
 				{
-					"name": "updateFamiliar",
+					"name": "deleteFamiliar KO-404",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/familiar/404",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"familiar",
+								"404"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteFamiliar KO-500",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/familiar/500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"familiar",
+								"500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateFamiliar OK",
 					"request": {
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": " {\r\n    \"id\": 2,\r\n    \"nombre\": \"Fernando\",\r\n    \"apellidos\": \"Rodriguez Taboada\",\r\n    \"dni\": \"44091652P\",\r\n    \"fechaNacimiento\": \"26-09-1988\",\r\n    \"telefono\": \"600623180\"\r\n}\r\n",
+							"raw": " {\r\n    \"id\": 5,\r\n    \"nombre\": \"Martin\",\r\n    \"apellidos\": \"RodriguezTaboada\",\r\n    \"dni\": \"44091652P\",\r\n    \"fechaNacimiento\": \"26-09-1988\",\r\n    \"telefono\": \"745123987\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -475,13 +653,13 @@
 					"response": []
 				},
 				{
-					"name": "ModificarTelefonoFamiliar",
+					"name": "updateFamiliar KO-400",
 					"request": {
-						"method": "PATCH",
+						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "923568978",
+							"raw": " {\r\n    \"id\": 2,\r\n    \"nombre\": \"\",\r\n    \"apellidos\": \"Rodriguez Taboada\",\r\n    \"dni\": \"44091652P\",\r\n    \"fechaNacimiento\": \"26-09-1988\",\r\n    \"telefono\": \"600623180\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -489,7 +667,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/familiar/1",
+							"raw": "http://localhost:8080/familiar/400",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -497,7 +675,36 @@
 							"port": "8080",
 							"path": [
 								"familiar",
-								"1"
+								"400"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateFamiliar KO-404",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"id\": 2,\r\n    \"nombre\": \"Fernando\",\r\n    \"apellidos\": \"Rodriguez Taboada\",\r\n    \"dni\": \"44091652P\",\r\n    \"fechaNacimiento\": \"26-09-1988\",\r\n    \"telefono\": \"600623180\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/familiar/404",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"familiar",
+								"404"
 							]
 						}
 					},
@@ -509,7 +716,7 @@
 			"name": "Planes",
 			"item": [
 				{
-					"name": "addPlan",
+					"name": "addPlan OK",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -537,13 +744,13 @@
 					"response": []
 				},
 				{
-					"name": "plan{planId}/residente{residenteId}",
+					"name": "addPlan KO-400",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"planId\": 6,\r\n    \"residenteId\": 10\r\n}",
+							"raw": "{\r\n    \"nombrePlan\": \"\",\r\n    \"terapia\": \"Juegos Lúdicos\",\r\n    \"fechaInicio\": \"01-12-2021\",\r\n    \"fechaFin\": null,\r\n    \"importante\": true,\r\n    \"descripcion\": \"Baloncesto adaptado\",\r\n    \"profesional\": 3\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -551,24 +758,49 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/plan/6/residente/10",
+							"raw": "http://localhost:8080/planes400",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"plan",
-								"6",
-								"residente",
-								"10"
+								"planes400"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "consultPlanes",
+					"name": "addPlan KO-500",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombrePlan\": \"GeroBasket\",\r\n    \"terapia\": \"Juegos Lúdicos\",\r\n    \"fechaInicio\": \"01-12-2021\",\r\n    \"fechaFin\": null,\r\n    \"importante\": true,\r\n    \"descripcion\": \"Baloncesto adaptado\",\r\n    \"profesional\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/planes500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planes500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultPlanes OK",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -587,42 +819,45 @@
 					"response": []
 				},
 				{
-					"name": "consultPlanesVariosCriterios",
+					"name": "consultPlanes KO-404",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/planes?nombre=gerobasket",
+							"raw": "http://localhost:8080/planes404",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"planes"
-							],
-							"query": [
-								{
-									"key": "nombre",
-									"value": "gerobasket"
-								},
-								{
-									"key": "descripcion",
-									"value": "baloncesto adaptado",
-									"disabled": true
-								},
-								{
-									"key": "terapia",
-									"value": "juegos ludicos",
-									"disabled": true
-								}
+								"planes404"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "consultPlanesById",
+					"name": "consultPlanes KO-500",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/planes500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"planes500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultPlanesById OK",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -642,12 +877,12 @@
 					"response": []
 				},
 				{
-					"name": "SQLconsultTotalResidentesPlan",
+					"name": "consultPlanesById KO-404",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/plan/1/numResidentes",
+							"raw": "http://localhost:8080/plan/404",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -655,15 +890,34 @@
 							"port": "8080",
 							"path": [
 								"plan",
-								"1",
-								"numResidentes"
+								"404"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "deletePlan",
+					"name": "consultPlanesById KO-500",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/plan/500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plan",
+								"500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePlan OK",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -683,7 +937,47 @@
 					"response": []
 				},
 				{
-					"name": "updatePlan",
+					"name": "deletePlan KO-500",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/plan/500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plan",
+								"500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePlan KO-404",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/plan/404",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plan",
+								"404"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePlan OK",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -712,13 +1006,13 @@
 					"response": []
 				},
 				{
-					"name": "ModificarImportanciaPlan",
+					"name": "updatePlan KO-404",
 					"request": {
-						"method": "PATCH",
+						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "true",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombrePlan\": \"Terapia Cognitiva\",\r\n    \"terapia\": \"Juegos Lúdicos\",\r\n    \"fechaInicio\": \"01-12-2021\",\r\n    \"fechaFin\": \"\",\r\n    \"importante\": false,\r\n    \"descripcion\": \"Pasatienpos adaptados, lectura, clases adaptadas...\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -726,7 +1020,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/plan/1",
+							"raw": "http://localhost:8080/plan/404",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -734,7 +1028,36 @@
 							"port": "8080",
 							"path": [
 								"plan",
-								"1"
+								"404"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePlan KO-400",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombrePlan\": \"\",\r\n    \"terapia\": \"Juegos Lúdicos\",\r\n    \"fechaInicio\": \"01-12-2021\",\r\n    \"fechaFin\": \"\",\r\n    \"importante\": false,\r\n    \"descripcion\": \"Pasatienpos adaptados, lectura, clases adaptadas...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/plan/400",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plan",
+								"400"
 							]
 						}
 					},
@@ -746,7 +1069,7 @@
 			"name": "Profesionales",
 			"item": [
 				{
-					"name": "addProfesional",
+					"name": "addProfesional OK",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -774,62 +1097,120 @@
 					"response": []
 				},
 				{
-					"name": "consultProfesionales",
+					"name": "addProfesional KO-400",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/profesionales",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"profesionales"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "consultProfesionalesVariosCriterios",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/profesionales",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"profesionales"
-							],
-							"query": [
-								{
-									"key": "nombre",
-									"value": "Alberto",
-									"disabled": true
-								},
-								{
-									"key": "dni",
-									"value": "44091652P",
-									"disabled": true
-								},
-								{
-									"key": "apellidos",
-									"value": "Lopez Gonzalez",
-									"disabled": true
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": \"78451236P\",\r\n    \"nombre\": \"\",\r\n    \"apellidos\": \"Lopez Gonzalez\",\r\n    \"fechaNacimiento\": \"26-09-1982\",\r\n    \"categoria\": \"Terapeuta Ocupacional\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/profesionales400",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profesionales400"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "consultprofesionalById",
+					"name": "addProfesional KO-500",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": \"78451236P\",\r\n    \"nombre\": \"Maria\",\r\n    \"apellidos\": \"Lopez Gonzalez\",\r\n    \"fechaNacimiento\": \"26-09-1982\",\r\n    \"categoria\": \"Terapeuta Ocupacional\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/profesionales500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profesionales500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultProfesionales OK",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/profesionales",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profesionales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultProfesionales KO-404",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/profesionales404",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profesionales404"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultProfesionales KO-500",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/profesionales500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profesionales500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultprofesionalById OK",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -856,7 +1237,61 @@
 					"response": []
 				},
 				{
-					"name": "deleteProfesional",
+					"name": "consultprofesionalById KO-404",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/profesional/404",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profesional",
+								"404"
+							],
+							"query": [
+								{
+									"key": "profesional",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultprofesionalById KO-500",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/profesional/500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profesional",
+								"500"
+							],
+							"query": [
+								{
+									"key": "profesional",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProfesional OK",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -876,13 +1311,53 @@
 					"response": []
 				},
 				{
-					"name": "updateProfesional",
+					"name": "deleteProfesional KO-404",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/profesional/404",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profesional",
+								"404"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProfesional KO-500",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/profesional/500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profesional",
+								"500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfesional OK",
 					"request": {
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 3,\r\n    \"nombre\": \"Alberto\",\r\n    \"apellidos\": \"Rodriguez Taboada\",\r\n    \"dni\": \"44091652P\",\r\n    \"fechaNacimiento\": \"26-09-1988\",\r\n    \"categoria\": \"Enfermero\"\r\n}",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"nombre\": \"Alberto\",\r\n    \"apellidos\": \"Rodriguez Taboada\",\r\n    \"dni\": \"44091652P\",\r\n    \"fechaNacimiento\": \"26-09-1988\",\r\n    \"categoria\": \"Médico\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -905,13 +1380,13 @@
 					"response": []
 				},
 				{
-					"name": "ModificarCategoriaProfesional",
+					"name": "updateProfesional KO-400",
 					"request": {
-						"method": "PATCH",
+						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "Fisioterapeuta",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"nombre\": \"\",\r\n    \"apellidos\": \"Rodriguez Taboada\",\r\n    \"dni\": \"44091652P\",\r\n    \"fechaNacimiento\": \"26-09-1988\",\r\n    \"categoria\": \"Enfermero\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -919,15 +1394,44 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/profesional/1",
+							"raw": "http://localhost:8080/profesionales/400",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"profesional",
-								"1"
+								"profesionales",
+								"400"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfesional KO-404",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"nombre\": \"Alberto\",\r\n    \"apellidos\": \"Rodriguez Taboada\",\r\n    \"dni\": \"44091652P\",\r\n    \"fechaNacimiento\": \"26-09-1988\",\r\n    \"categoria\": \"Enfermero\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/profesionales/404",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profesionales",
+								"404"
 							]
 						}
 					},
@@ -939,7 +1443,7 @@
 			"name": "Residentes",
 			"item": [
 				{
-					"name": "addResidente",
+					"name": "addResidente OK",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -967,62 +1471,120 @@
 					"response": []
 				},
 				{
-					"name": "consultResidentes",
+					"name": "addResidente KO-400",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/residentes",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"residentes"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "consultResidentesVariosCriterios",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/residentes",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"residentes"
-							],
-							"query": [
-								{
-									"key": "nombre",
-									"value": "Victoria",
-									"disabled": true
-								},
-								{
-									"key": "dni",
-									"value": "12345678Y",
-									"disabled": true
-								},
-								{
-									"key": "apellidos",
-									"value": "Rodriguez Castro",
-									"disabled": true
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": \"78459632L\",\r\n    \"nombre\": \"\",\r\n    \"apellidos\": \"Rodríguez Castro\",\r\n    \"fechaNacimiento\": \"03-08-1947\",\r\n    \"sexo\": \"M\",\r\n    \"saldo\": 0,\r\n    \"centro\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/residentes400",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"residentes400"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "consultResidenteById",
+					"name": "addResidente KO-500",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": \"78459632L\",\r\n    \"nombre\": \"Victorino\",\r\n    \"apellidos\": \"Rodríguez Castro\",\r\n    \"fechaNacimiento\": \"03-08-1947\",\r\n    \"sexo\": \"M\",\r\n    \"saldo\": 0,\r\n    \"centro\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/residentes500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"residentes500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultResidentes OK",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/residentes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"residentes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultResidentes KO-404",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/residentes404",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"residentes404"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultResidentes KO-500",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/residentes500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"residentes500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultResidenteById OK",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -1042,32 +1604,12 @@
 					"response": []
 				},
 				{
-					"name": "SQLconsultResidentesSaldo",
+					"name": "consultResidenteById KO-404",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/residentes/200",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"residentes",
-								"200"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "deleteResidente",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/residente/hola",
+							"raw": "http://localhost:8080/residente/404",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1075,14 +1617,152 @@
 							"port": "8080",
 							"path": [
 								"residente",
-								"hola"
+								"404"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "updateResidente",
+					"name": "consultResidenteById KO-500",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/residente/500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"residente",
+								"500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteResidente OK",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/residente/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"residente",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteResidente KO-404",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/residente/404",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"residente",
+								"404"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteResidente KO-500",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/residente/500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"residente",
+								"500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateResidente OK",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"nombre\": \"Fernando\",\r\n    \"apellidos\": \"Rodríguez Castro\",\r\n    \"dni\": \"78459632L\",\r\n    \"fechaNacimiento\": \"03-08-1947\",\r\n    \"sexo\": \"M\",\r\n    \"saldo\": 500.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/residente/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"residente",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateResidente KO-400",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"dni\": \"\",\r\n    \"nombre\": \"Victoria\",\r\n    \"apellidos\": \"Garcia Sanchez\",\r\n    \"fechaNacimiento\": \"03-08-1949\",\r\n    \"sexo\": \"F\",\r\n    \"saldo\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/residente/400",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"residente",
+								"400"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateResidente KO-404",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -1096,7 +1776,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/residente/2",
+							"raw": "http://localhost:8080/residente/404",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1104,36 +1784,7 @@
 							"port": "8080",
 							"path": [
 								"residente",
-								"2"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "ModificarSaldoResidente",
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "200",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/residente/2",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"residente",
-								"2"
+								"404"
 							]
 						}
 					},
